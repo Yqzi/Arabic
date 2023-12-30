@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "454995657689",
+    "firebase_url": "https://restaurant-6652e-default-rtdb.firebaseio.com",
+    "project_id": "restaurant-6652e",
+    "storage_bucket": "restaurant-6652e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:454995657689:android:2071ed23f0b560b1f48fc8",
+        "android_client_info": {
+          "package_name": "com.example.famous_restaurant"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB1ATSquWJZ2s6CDgLEE9S4XXS6r2tHug4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
