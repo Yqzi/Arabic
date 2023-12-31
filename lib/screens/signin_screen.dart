@@ -1,9 +1,6 @@
-import 'package:famous_restaurant/global.dart';
-import 'package:famous_restaurant/services/database.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
-import '../models/restaurant.dart';
 import '../reusable_widgets/reusable_widget.dart';
 import '../utils/color_utils.dart';
 import 'home_screen.dart';
@@ -20,8 +17,7 @@ class _SignInScreenState extends State<SignInScreen> {
   final TextEditingController _passwordTextController = TextEditingController();
   final TextEditingController _emailTextController = TextEditingController();
 
-  void goToHome(List<Res> l) {
-    resL = l.map((e) => e.title).toSet();
+  void goToHome() {
     Navigator.push(context, MaterialPageRoute(builder: (context) {
       return const HomeScreen();
     }));
@@ -35,9 +31,17 @@ class _SignInScreenState extends State<SignInScreen> {
         height: MediaQuery.of(context).size.height,
         decoration: BoxDecoration(
             gradient: LinearGradient(colors: [
-          hexStringToColor("CB2B93"),
-          hexStringToColor("9546C4"),
-          hexStringToColor("5E61F4")
+          hexStringToColor("F4E4DF"),
+          hexStringToColor("86D2E1"),
+          hexStringToColor("DFE7EE"),
+
+          // hexStringToColor("DFE7EE"),
+          // hexStringToColor("86D2E1"),
+          // hexStringToColor("004E59"),
+
+          // hexStringToColor("F4E4DF"),
+          // hexStringToColor("FFB59D"),
+          // hexStringToColor("9FC9FF")
         ], begin: Alignment.topCenter, end: Alignment.bottomCenter)),
         child: SingleChildScrollView(
           child: Padding(
@@ -60,17 +64,9 @@ class _SignInScreenState extends State<SignInScreen> {
                   height: 5,
                 ),
                 firebaseUIButton(context, "Sign In", () {
-                  FirebaseAuth.instance
-                      .signInWithEmailAndPassword(
-                          email: _emailTextController.text,
-                          password: _passwordTextController.text)
-                      .then((value) async {
-                    List<Res> resL = await DatabaseService.getfavourites();
-                    goToHome(resL);
-                  }).onError((error, stackTrace) {
-                    // ignore: avoid_print
-                    print("Error ${error.toString()}");
-                  });
+                  FirebaseAuth.instance.signInWithEmailAndPassword(
+                      email: _emailTextController.text,
+                      password: _passwordTextController.text);
                 }),
                 signUpOption()
               ],

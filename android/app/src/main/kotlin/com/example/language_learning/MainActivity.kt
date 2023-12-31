@@ -1,4 +1,4 @@
-package com.example.famous_restaurant
+package com.example.language_learning
 
 import io.flutter.embedding.android.FlutterActivity
 

@@ -5,13 +5,21 @@ import 'firebase_options.dart';
 
 import 'screens/signin_screen.dart';
 
-final theme = FlexThemeData.light(
-  scheme: FlexScheme.gold,
+final theme = FlexThemeData.dark(
+  colors: const FlexSchemeColor(
+    primary: Color(0xff9fc9ff),
+    primaryContainer: Color(0xff00325b),
+    secondary: Color(0xffffb59d),
+    secondaryContainer: Color(0xff872100),
+    tertiary: Color(0xff86d2e1),
+    tertiaryContainer: Color(0xff004e59),
+    appBarColor: Color(0xff872100),
+    error: Color(0xffcf6679),
+  ),
   surfaceMode: FlexSurfaceMode.levelSurfacesLowScaffold,
-  blendLevel: 7,
+  blendLevel: 13,
   subThemesData: const FlexSubThemesData(
-    blendOnLevel: 10,
-    blendOnColors: false,
+    blendOnLevel: 20,
     useTextTheme: true,
     useM2StyleDividerInM3: true,
     alignedDropdown: true,
@@ -33,12 +41,11 @@ void main() async {
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: theme,
+      darkTheme: theme,
       home: const SignInScreen(),
     );
   }
