@@ -44,41 +44,37 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyCmjuzpzKPy8_cr6mvLyzO02L6aQSkQ8zc',
-    appId: '1:454995657689:web:35ae7ee77698fa63f48fc8',
-    messagingSenderId: '454995657689',
-    projectId: 'restaurant-6652e',
-    authDomain: 'restaurant-6652e.firebaseapp.com',
-    databaseURL: 'https://restaurant-6652e-default-rtdb.firebaseio.com',
-    storageBucket: 'restaurant-6652e.appspot.com',
+    apiKey: 'AIzaSyBlK_nUheMIgSG4Kr042C_wES2MsWIJtD0',
+    appId: '1:966415306637:web:f9378f4b99876d4169b7c4',
+    messagingSenderId: '966415306637',
+    projectId: 'language-784a0',
+    authDomain: 'language-784a0.firebaseapp.com',
+    storageBucket: 'language-784a0.appspot.com',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyB1ATSquWJZ2s6CDgLEE9S4XXS6r2tHug4',
-    appId: '1:454995657689:android:2071ed23f0b560b1f48fc8',
-    messagingSenderId: '454995657689',
-    projectId: 'restaurant-6652e',
-    databaseURL: 'https://restaurant-6652e-default-rtdb.firebaseio.com',
-    storageBucket: 'restaurant-6652e.appspot.com',
+    apiKey: 'AIzaSyCmixNaVYAR7l4i5DEtcluw6D-uXOdlSt8',
+    appId: '1:966415306637:android:e0c88d908436575969b7c4',
+    messagingSenderId: '966415306637',
+    projectId: 'language-784a0',
+    storageBucket: 'language-784a0.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyB-nALvU6tUyAnEtdQ--7hQ6kLaW5c1xbQ',
-    appId: '1:454995657689:ios:7608ddeecbbe3047f48fc8',
-    messagingSenderId: '454995657689',
-    projectId: 'restaurant-6652e',
-    databaseURL: 'https://restaurant-6652e-default-rtdb.firebaseio.com',
-    storageBucket: 'restaurant-6652e.appspot.com',
+    apiKey: 'AIzaSyAX4aqYG40sBbnLgPcWGT0ANyZZnJKhZu4',
+    appId: '1:966415306637:ios:8394a12a170833ce69b7c4',
+    messagingSenderId: '966415306637',
+    projectId: 'language-784a0',
+    storageBucket: 'language-784a0.appspot.com',
     iosBundleId: 'com.example.famousRestaurant',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyB-nALvU6tUyAnEtdQ--7hQ6kLaW5c1xbQ',
-    appId: '1:454995657689:ios:669032e1df023472f48fc8',
-    messagingSenderId: '454995657689',
-    projectId: 'restaurant-6652e',
-    databaseURL: 'https://restaurant-6652e-default-rtdb.firebaseio.com',
-    storageBucket: 'restaurant-6652e.appspot.com',
+    apiKey: 'AIzaSyAX4aqYG40sBbnLgPcWGT0ANyZZnJKhZu4',
+    appId: '1:966415306637:ios:396aa12a9c8cac5269b7c4',
+    messagingSenderId: '966415306637',
+    projectId: 'language-784a0',
+    storageBucket: 'language-784a0.appspot.com',
     iosBundleId: 'com.example.famousRestaurant.RunnerTests',
   );
 }
