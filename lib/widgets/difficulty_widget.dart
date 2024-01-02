@@ -1,46 +1,67 @@
-import 'package:famous_restaurant/global.dart';
 import 'package:flutter/material.dart';
 
 class DiffWidget extends StatelessWidget {
+  final String difficulty;
   final String title;
-  final Difficulty difficulty;
   final String body;
-  final LinearProgressIndicator progressbar;
+  final Color color;
   const DiffWidget({
     super.key,
     required this.difficulty,
     required this.title,
     required this.body,
-    required this.progressbar,
+    required this.color,
   });
 
   @override
   Widget build(BuildContext context) {
-    return MaterialButton(
-      onPressed: () {},
-      child: Container(
-        child: Column(
-          children: [
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Text('$difficulty'),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Text(
-                title,
-                style: const TextStyle(
-                  fontSize: 24,
-                  fontWeight: FontWeight.w500,
-                ),
+    return Expanded(
+      child: Padding(
+        padding: const EdgeInsets.all(12.0),
+        child: MaterialButton(
+          minWidth: MediaQuery.of(context).size.width,
+          shape:
+              RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
+          color: color,
+          elevation: 0,
+          onPressed: () {},
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: SizedBox(
+              width: double.maxFinite,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    difficulty,
+                    textAlign: TextAlign.start,
+                    style:
+                        TextStyle(color: Theme.of(context).colorScheme.error),
+                  ),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        title,
+                        textAlign: TextAlign.start,
+                        style: const TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.w500,
+                            color: Colors.white),
+                      ),
+                      Text(
+                        body,
+                        textAlign: TextAlign.start,
+                        style: const TextStyle(color: Colors.white),
+                      )
+                    ],
+                  ),
+                  const Text('implement proress bar')
+                ],
               ),
             ),
-            Text(body),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: progressbar,
-            ),
-          ],
+          ),
         ),
       ),
     );

@@ -1,6 +1,6 @@
 {
-    "name": "famous_restaurant",
-    "short_name": "famous_restaurant",
+    "name": "language_learning",
+    "short_name": "language_learning",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

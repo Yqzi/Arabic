@@ -64,9 +64,17 @@ class _SignInScreenState extends State<SignInScreen> {
                   height: 5,
                 ),
                 firebaseUIButton(context, "Sign In", () {
-                  FirebaseAuth.instance.signInWithEmailAndPassword(
-                      email: _emailTextController.text,
-                      password: _passwordTextController.text);
+                  FirebaseAuth.instance
+                      .signInWithEmailAndPassword(
+                    email: _emailTextController.text,
+                    password: _passwordTextController.text,
+                  )
+                      .then((value) async {
+                    goToHome();
+                  }).onError((error, stackTrace) {
+                    print("Error ${error.toString()}");
+                  });
+                  ;
                 }),
                 signUpOption()
               ],
