@@ -81,52 +81,52 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-  Container customBottomNav(BuildContext context) {
-    return Container(
-      height: 85,
-      //add ClipRRect widget for Round Corner
-      child: ClipRRect(
-        borderRadius: const BorderRadius.only(
-          topRight: Radius.circular(32),
-          topLeft: Radius.circular(32),
-        ),
-        child: BottomNavigationBar(
-          //add background color
-          backgroundColor: Theme.of(context).colorScheme.primaryContainer,
-          items: <BottomNavigationBarItem>[
-            BottomNavigationBarItem(
-              icon: Container(
-                  height: 55,
-                  color: _selectedIndex == 0
-                      ? Theme.of(context).colorScheme.tertiaryContainer
-                      : Colors.transparent,
-                  child: const Icon(Icons.home)),
-              label: '',
-            ),
-            BottomNavigationBarItem(
-              icon: Container(
-                  height: 77,
-                  color: _selectedIndex == 1
-                      ? Theme.of(context).colorScheme.tertiaryContainer
-                      : Colors.transparent,
-                  child: const Icon(Icons.business)),
-              label: '',
-            ),
-            BottomNavigationBarItem(
-              icon: Container(
-                  height: 77,
-                  color: _selectedIndex == 2
-                      ? Theme.of(context).colorScheme.tertiaryContainer
-                      : Colors.transparent,
-                  child: const Icon(Icons.school)),
-              label: '',
-            ),
-          ],
-          currentIndex: _selectedIndex,
-          selectedItemColor: Colors.white,
-          onTap: _onItemTapped,
-        ),
-      ),
-    );
-  }
+  // Container customBottomNav(BuildContext context) {
+  //   return Container(
+  //     height: 85,
+  //     //add ClipRRect widget for Round Corner
+  //     child: ClipRRect(
+  //       borderRadius: const BorderRadius.only(
+  //         topRight: Radius.circular(32),
+  //         topLeft: Radius.circular(32),
+  //       ),
+  //       child: BottomNavigationBar(
+  //         //add background color
+  //         backgroundColor: Theme.of(context).colorScheme.primaryContainer,
+  //         items: <BottomNavigationBarItem>[
+  //           BottomNavigationBarItem(
+  //             icon: Container(
+  //                 height: 55,
+  //                 color: _selectedIndex == 0
+  //                     ? Theme.of(context).colorScheme.tertiaryContainer
+  //                     : Colors.transparent,
+  //                 child: const Icon(Icons.home)),
+  //             label: '',
+  //           ),
+  //           BottomNavigationBarItem(
+  //             icon: Container(
+  //                 height: 77,
+  //                 color: _selectedIndex == 1
+  //                     ? Theme.of(context).colorScheme.tertiaryContainer
+  //                     : Colors.transparent,
+  //                 child: const Icon(Icons.business)),
+  //             label: '',
+  //           ),
+  //           BottomNavigationBarItem(
+  //             icon: Container(
+  //                 height: 77,
+  //                 color: _selectedIndex == 2
+  //                     ? Theme.of(context).colorScheme.tertiaryContainer
+  //                     : Colors.transparent,
+  //                 child: const Icon(Icons.school)),
+  //             label: '',
+  //           ),
+  //         ],
+  //         currentIndex: _selectedIndex,
+  //         selectedItemColor: Colors.white,
+  //         onTap: _onItemTapped,
+  //       ),
+  //     ),
+  //   );
+  // }
 }
