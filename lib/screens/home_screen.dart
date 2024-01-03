@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../widgets/custom_nav_bar.dart';
 import '../widgets/difficulty_widget.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -36,8 +37,8 @@ class _HomeScreenState extends State<HomeScreen> {
                     Text(
                       'Flashcards',
                       style: TextStyle(
-                        fontSize: 30,
-                        fontWeight: FontWeight.bold,
+                        fontSize: 29,
+                        fontWeight: FontWeight.w700,
                         color: Theme.of(context).colorScheme.secondary,
                       ),
                       textAlign: TextAlign.start,
@@ -77,7 +78,7 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ),
       ),
-      bottomNavigationBar: customBottomNav(context),
+      bottomNavigationBar: const customBottomNav(),
     );
   }
 

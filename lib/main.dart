@@ -16,7 +16,7 @@ ThemeData darkTheme(BuildContext context) => FlexThemeData.dark(
         secondary: Color(0xff7ac0c4),
         secondaryContainer: Color(0xfffff1c1),
         tertiary: Color(0xfffb7595),
-        tertiaryContainer: Color(0xff0d0f07),
+        tertiaryContainer: Color.fromARGB(167, 13, 15, 7),
         appBarColor: Color(0xfffff1c1),
         error: Color(0xffcf6679),
       ),
