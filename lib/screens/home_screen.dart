@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 
 import '../widgets/custom_nav_bar.dart';
@@ -7,16 +9,28 @@ class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
   @override
-  _HomeScreenState createState() => _HomeScreenState();
+  HomeScreenState createState() => HomeScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
-  int _selectedIndex = 0;
+class HomeScreenState extends State<HomeScreen> {
+  final bottomNavEventController = StreamController<int>();
+  int pageIndex = 0;
 
-  void _onItemTapped(int index) {
-    setState(() {
-      _selectedIndex = index;
-    });
+  void changePage(int index) => setState(() => pageIndex = index);
+
+  static HomeScreenState? of(BuildContext context) =>
+      context.findAncestorStateOfType<HomeScreenState>();
+
+  @override
+  void initState() {
+    bottomNavEventController.stream.listen(changePage);
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    bottomNavEventController.close();
+    super.dispose();
   }
 
   @override
@@ -78,56 +92,7 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ),
       ),
-      bottomNavigationBar: const customBottomNav(),
+      bottomNavigationBar: CustomBottomNav(index: pageIndex),
     );
   }
-
-  // Container customBottomNav(BuildContext context) {
-  //   return Container(
-  //     height: 85,
-  //     //add ClipRRect widget for Round Corner
-  //     child: ClipRRect(
-  //       borderRadius: const BorderRadius.only(
-  //         topRight: Radius.circular(32),
-  //         topLeft: Radius.circular(32),
-  //       ),
-  //       child: BottomNavigationBar(
-  //         //add background color
-  //         backgroundColor: Theme.of(context).colorScheme.primaryContainer,
-  //         items: <BottomNavigationBarItem>[
-  //           BottomNavigationBarItem(
-  //             icon: Container(
-  //                 height: 55,
-  //                 color: _selectedIndex == 0
-  //                     ? Theme.of(context).colorScheme.tertiaryContainer
-  //                     : Colors.transparent,
-  //                 child: const Icon(Icons.home)),
-  //             label: '',
-  //           ),
-  //           BottomNavigationBarItem(
-  //             icon: Container(
-  //                 height: 77,
-  //                 color: _selectedIndex == 1
-  //                     ? Theme.of(context).colorScheme.tertiaryContainer
-  //                     : Colors.transparent,
-  //                 child: const Icon(Icons.business)),
-  //             label: '',
-  //           ),
-  //           BottomNavigationBarItem(
-  //             icon: Container(
-  //                 height: 77,
-  //                 color: _selectedIndex == 2
-  //                     ? Theme.of(context).colorScheme.tertiaryContainer
-  //                     : Colors.transparent,
-  //                 child: const Icon(Icons.school)),
-  //             label: '',
-  //           ),
-  //         ],
-  //         currentIndex: _selectedIndex,
-  //         selectedItemColor: Colors.white,
-  //         onTap: _onItemTapped,
-  //       ),
-  //     ),
-  //   );
-  // }
 }

@@ -12,11 +12,11 @@ ThemeData darkTheme(BuildContext context) => FlexThemeData.dark(
           .apply(bodyColor: Colors.white, displayColor: Colors.white)),
       colors: const FlexSchemeColor(
         primary: Color(0xff3e525c),
-        primaryContainer: Color.fromARGB(60, 0, 20, 14),
+        primaryContainer: Color.fromARGB(90, 0, 20, 14),
         secondary: Color(0xff7ac0c4),
         secondaryContainer: Color(0xfffff1c1),
         tertiary: Color(0xfffb7595),
-        tertiaryContainer: Color.fromARGB(167, 13, 15, 7),
+        tertiaryContainer: Color.fromARGB(140, 13, 15, 7),
         appBarColor: Color(0xfffff1c1),
         error: Color(0xffcf6679),
       ),
