@@ -70,6 +70,7 @@ class HomeScreenState extends State<HomeScreen> {
               ),
               DiffWidget(
                 color: Theme.of(context).colorScheme.secondary,
+                color2: Theme.of(context).colorScheme.secondaryContainer,
                 difficulty: 'beginner',
                 title: 'Letters',
                 body: 'Start your adventure',
@@ -77,6 +78,7 @@ class HomeScreenState extends State<HomeScreen> {
               const SizedBox(height: 10),
               DiffWidget(
                 color: Theme.of(context).colorScheme.tertiary,
+                color2: Theme.of(context).colorScheme.tertiary,
                 difficulty: 'intermediate',
                 title: 'Starting words',
                 body: 'Build your adventure',
@@ -84,6 +86,7 @@ class HomeScreenState extends State<HomeScreen> {
               const SizedBox(height: 10),
               DiffWidget(
                 color: Theme.of(context).colorScheme.secondaryContainer,
+                color2: Theme.of(context).colorScheme.secondary,
                 difficulty: 'advanced',
                 title: 'Sentances',
                 body: 'Complete your adventure',
