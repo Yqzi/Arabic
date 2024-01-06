@@ -1,3 +1,3 @@
 - make parallax scrolling for game background(use space and star theme)
 - have FlashCard difficult related to users game level
-- Use pageController to auto scroll up to next level after completion
+- Use pageController to auto scroll up to next level after completio
