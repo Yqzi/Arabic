@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:language_learning/global.dart';
+import 'package:language_learning/screens/flashcards_screen.dart';
 import 'package:language_learning/screens/home_screen.dart';
 
 class CustomBottomNav extends StatelessWidget {
@@ -65,6 +67,13 @@ class _Button extends StatelessWidget {
               HomeScreenState.of(context)!
                   .bottomNavEventController
                   .add(selfIndex);
+              Navigator.push(context, MaterialPageRoute(builder: (context) {
+                return selfIndex == 0
+                    ? const HomeScreen()
+                    : selfIndex == 1
+                        ? const FlashCardScreen()
+                        : const HomeScreen();
+              }));
             },
             icon: Opacity(
               opacity: index == selfIndex ? 1 : 0.6,

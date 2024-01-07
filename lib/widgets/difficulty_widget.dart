@@ -82,13 +82,6 @@ class DiffWidget extends StatelessWidget {
                       width: 2,
                     ),
                   ),
-                  // VerticalDivider(
-                  //   width: 10,
-                  //   thickness: 2,
-                  //   color: Colors.white,
-                  //   endIndent: 20,
-                  //   indent: 20,
-                  // )
                 ],
               ),
             ),

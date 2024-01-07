@@ -19,7 +19,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
 
   void goToHome() {
     Navigator.push(context, MaterialPageRoute(builder: (context) {
-      return HomeScreen();
+      return const HomeScreen();
     }));
   }
 
