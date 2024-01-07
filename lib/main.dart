@@ -3,7 +3,7 @@ import 'package:flex_color_scheme/flex_color_scheme.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:language_learning/screens/flashcards_screen.dart';
-import 'package:language_learning/screens/home_screen.dart';
+import 'package:language_learning/screens/home.dart';
 import 'firebase_options.dart';
 
 import 'screens/signin_screen.dart';

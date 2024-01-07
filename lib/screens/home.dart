@@ -20,14 +20,14 @@ class HomeState extends State<Home> {
   static HomeState? of(BuildContext context) =>
       context.findAncestorStateOfType<HomeState>();
 
-  Widget getPage(int index) {
-    if (index == 0) {
-      return FlashCardScreen();
+  Widget getPage() {
+    if (pageIndex == 0) {
+      return const FlashCardScreen();
     }
-    if (index == 1) {
-      return FlashCardScreen();
+    if (pageIndex == 1) {
+      return const FlashCardScreen();
     }
-    return FlashCardScreen();
+    return const FlashCardScreen();
   }
 
   @override
@@ -46,7 +46,7 @@ class HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.primary,
-      body: getPage(pageIndex),
+      body: getPage(),
       bottomNavigationBar: CustomBottomNav(index: pageIndex),
     );
   }

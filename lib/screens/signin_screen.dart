@@ -4,7 +4,7 @@ import 'package:language_learning/screens/flashcards_screen.dart';
 
 import '../reusable_widgets/reusable_widget.dart';
 import '../utils/color_utils.dart';
-import 'home_screen.dart';
+import 'home.dart';
 import 'signup_screen.dart';
 
 class SignInScreen extends StatefulWidget {
@@ -20,7 +20,7 @@ class _SignInScreenState extends State<SignInScreen> {
 
   void goToHome() {
     Navigator.push(context, MaterialPageRoute(builder: (context) {
-      return const FlashCardScreen();
+      return const Home();
     }));
   }
 

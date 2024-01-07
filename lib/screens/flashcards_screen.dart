@@ -2,14 +2,9 @@ import 'package:flutter/material.dart';
 
 import '../widgets/difficulty_widget.dart';
 
-class FlashCardScreen extends StatefulWidget {
+class FlashCardScreen extends StatelessWidget {
   const FlashCardScreen({super.key});
 
-  @override
-  FlashCardScreenState createState() => FlashCardScreenState();
-}
-
-class FlashCardScreenState extends State<FlashCardScreen> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
