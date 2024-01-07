@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:language_learning/screens/flashcards_screen.dart';
 
 import '../reusable_widgets/reusable_widget.dart';
 import '../utils/color_utils.dart';
@@ -19,7 +20,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
 
   void goToHome() {
     Navigator.push(context, MaterialPageRoute(builder: (context) {
-      return const HomeScreen();
+      return const FlashCardScreen();
     }));
   }
 

@@ -1,24 +1,34 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:language_learning/screens/flashcards_screen.dart';
 import 'package:language_learning/widgets/custom_nav_bar.dart';
 
-class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key});
+class Home extends StatefulWidget {
+  const Home({super.key});
 
   @override
-  State<HomeScreen> createState() => HomeScreenState();
+  State<Home> createState() => HomeState();
 }
 
-int pageIndex = 0;
-
-class HomeScreenState extends State<HomeScreen> {
+class HomeState extends State<Home> {
   final bottomNavEventController = StreamController<int>();
+  int pageIndex = 0;
 
   void changePage(int index) => setState(() => pageIndex = index);
 
-  static HomeScreenState? of(BuildContext context) =>
-      context.findAncestorStateOfType<HomeScreenState>();
+  static HomeState? of(BuildContext context) =>
+      context.findAncestorStateOfType<HomeState>();
+
+  Widget getPage(int index) {
+    if (index == 0) {
+      return FlashCardScreen();
+    }
+    if (index == 1) {
+      return FlashCardScreen();
+    }
+    return FlashCardScreen();
+  }
 
   @override
   void initState() {
@@ -36,11 +46,7 @@ class HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.primary,
-      body: ListView(
-        children: [
-          Stack(),
-        ],
-      ),
+      body: getPage(pageIndex),
       bottomNavigationBar: CustomBottomNav(index: pageIndex),
     );
   }

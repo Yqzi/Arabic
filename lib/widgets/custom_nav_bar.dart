@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:language_learning/global.dart';
 import 'package:language_learning/screens/flashcards_screen.dart';
 import 'package:language_learning/screens/home_screen.dart';
 
@@ -63,16 +62,15 @@ class _Button extends StatelessWidget {
         width: MediaQuery.of(context).size.width / 3.5,
         child: IconButton(
             onPressed: () {
+              print(index);
               // access stream and push an event
-              HomeScreenState.of(context)!
-                  .bottomNavEventController
-                  .add(selfIndex);
+              HomeState.of(context)?.bottomNavEventController.add(selfIndex);
               Navigator.push(context, MaterialPageRoute(builder: (context) {
                 return selfIndex == 0
-                    ? const HomeScreen()
+                    ? const Home()
                     : selfIndex == 1
                         ? const FlashCardScreen()
-                        : const HomeScreen();
+                        : const Home();
               }));
             },
             icon: Opacity(
